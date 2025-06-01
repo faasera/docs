@@ -1,20 +1,92 @@
+# ======================================
+# Faasera Documentation Configuration
+# ======================================
+
 title: Faasera Documentation
-description: Technical and business documentation for the Faasera platform.
-baseurl: "" # Leave empty if publishing to a custom domain like docs.faasera.ai
-url: "https://docs.faasera.ai"
+author: Faasera Inc.
 
-theme: just-the-docs
+# Navbar links (optional custom categories)
+navbar-links:
+  Overview: "faasera-product-overview"
+  Architecture & Deployment:
+    - System Architecture: "faasera-system-architecture"
+    - Deployment Guide: "faasera-deployment-guide"
+  User Guides:
+    - Profiling Guide: "user-guide-profiler"
+    - Masking Guide: "user-guide-masking"
+    - Synthetic Data: "user-guide-synthetic"
+    - Validation: "user-guide-validation"
+    - Transformation: "user-guide-transformation"
+  Implementation:
+    - SDK Integration: "implementation-sdk"
+    - API Integration: "implementation-api"
+    - Cloud Functions: "implementation-cloud"
+  Reference Docs:
+    - Recognizer Types: "reference-recognizers"
+    - Masking Functions: "reference-masking-functions"
+    - Policy Format: "reference-policy-format"
+  Compliance:
+    - Regulation Coverage: "compliance-coverage"
+    - Data Security: "compliance-security"
 
-logo: https://cdn.prod.website-files.com/6798d24c84927cd018898ee1/6798d24c84927cd018899068_favicon32.png
-favicon_ico: https://cdn.prod.website-files.com/6798d24c84927cd018898ee1/6798d24c84927cd018899068_favicon32.png
+# Branding logo (hosted or local relative to /docs)
+title-img: /assets/faasera-logo.png
 
-color_scheme: dark
+# Socials and support
+social-network-links:
+  email: "support@faasera.ai"
+  youtube: "https://www.youtube.com/@FaaseraAI"
+  linkedin: "https://www.linkedin.com/company/faasera-ai"
+  facebook: "https://www.facebook.com/faaseraAi"
 
-# Enable search (built-in for just-the-docs)
-search_enabled: true
+# General Settings
+rss-description: "Faasera is an AI-powered Function-as-a-Service platform for real-time data compliance, profiling, and synthetic data generation."
 
-# Navigation
-nav_sort: case_insensitive
-aux_links:
-  "Visit faasera.ai":
-    - "https://www.faasera.ai"
+share-links-active:
+  twitter: true
+  linkedin: true
+  facebook: false
+
+url-pretty: "faasera.ai"
+title-on-all-pages: true
+feed_show_excerpt: true
+feed_show_tags: false
+post_search: false
+edit_page_button: false
+
+# Theme and colors
+page-col: "#ffffff"
+text-col: "#333333"
+link-col: "#007acc"
+hover-col: "#005f99"
+navbar-col: "#ffffff"
+navbar-text-col: "#333333"
+footer-col: "#f5f5f5"
+footer-text-col: "#666666"
+footer-link-col: "#007acc"
+
+# Jekyll / Build config
+timezone: "Australia/Melbourne"
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Files to exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - scripts/
+  - .gitignore
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
