@@ -1,3 +1,20 @@
 title: Faasera Documentation
-theme: minima
-markdown: kramdown
+description: Technical and business documentation for the Faasera platform.
+baseurl: "" # Leave empty if publishing to a custom domain like docs.faasera.ai
+url: "https://docs.faasera.ai"
+
+theme: just-the-docs
+
+logo: https://cdn.prod.website-files.com/6798d24c84927cd018898ee1/6798d24c84927cd018899068_favicon32.png
+favicon_ico: https://cdn.prod.website-files.com/6798d24c84927cd018898ee1/6798d24c84927cd018899068_favicon32.png
+
+color_scheme: dark
+
+# Enable search (built-in for just-the-docs)
+search_enabled: true
+
+# Navigation
+nav_sort: case_insensitive
+aux_links:
+  "Visit faasera.ai":
+    - "https://www.faasera.ai"
