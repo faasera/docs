@@ -1,11 +1,12 @@
-
 # Faasera Masking User Guide
 
-This guide covers how to configure, execute, and optimize masking workflows in Faasera. The masking engine is designed for **deterministic**, **non-deterministic**, and **policy-driven** transformations across structured and semi-structured data.
+This guide covers how to configure, execute, and optimize masking workflows in Faasera. The masking engine is designed
+for **deterministic**, **non-deterministic**, and **policy-driven** transformations across structured and
+semi-structured data.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Deterministic & consistent masking (e.g., same input → same output)
 - Format-preserving encryption (FPE)
@@ -15,7 +16,7 @@ This guide covers how to configure, execute, and optimize masking workflows in F
 
 ---
 
-## 🔧 Masking Policy Structure
+## Masking Policy Structure
 
 Masking in Faasera is controlled via a `Policy` JSON which includes:
 
@@ -41,26 +42,26 @@ Masking in Faasera is controlled via a `Policy` JSON which includes:
 
 ### Common Masking Types
 
-| Type       | Description                                                        |
-|------------|--------------------------------------------------------------------|
-| `SEED`     | Uses a predefined list (e.g., names, cities)                       |
-| `PRESERVE` | Keeps format or domain intact (e.g., email@domain.com)            |
-| `REDACT`   | Replaces with a fixed or blank value                               |
-| `FPE`      | Format-preserving encryption using configurable key                |
-| `HASH`     | One-way hash using SHA-256 or user-defined algorithm               |
+| Type       | Description                                            |
+|------------|--------------------------------------------------------|
+| `SEED`     | Uses a predefined list (e.g., names, cities)           |
+| `PRESERVE` | Keeps format or domain intact (e.g., email@domain.com) |
+| `REDACT`   | Replaces with a fixed or blank value                   |
+| `FPE`      | Format-preserving encryption using configurable key    |
+| `HASH`     | One-way hash using SHA-256 or user-defined algorithm   |
 
 ---
 
-## 🧠 Deterministic vs Non-Deterministic
+## Deterministic vs Non-Deterministic
 
-| Mode             | Description                                                              |
-|------------------|--------------------------------------------------------------------------|
-| Deterministic    | Ensures the same input always maps to the same output.                   |
-| Non-deterministic| Each run may produce different outputs (e.g., `REDACT`, synthetic values)|
+| Mode              | Description                                                               |
+|-------------------|---------------------------------------------------------------------------|
+| Deterministic     | Ensures the same input always maps to the same output.                    |
+| Non-deterministic | Each run may produce different outputs (e.g., `REDACT`, synthetic values) |
 
 ---
 
-## ⚙️ Configuration Options
+## Configuration Options
 
 Each rule can be enriched with:
 
@@ -71,16 +72,16 @@ Each rule can be enriched with:
 
 ---
 
-## 🧪 In-Place vs Source-to-Target Masking
+## In-Place vs Source-to-Target Masking
 
-| Mode               | When to Use                        | Example                    |
-|--------------------|------------------------------------|----------------------------|
-| In-Place           | Modify existing DB/table           | Production field masking   |
-| Source-to-Target   | Copy + mask from source to target  | Dev/test DB environments   |
+| Mode             | When to Use                       | Example                  |
+|------------------|-----------------------------------|--------------------------|
+| In-Place         | Modify existing DB/table          | Production field masking |
+| Source-to-Target | Copy + mask from source to target | Dev/test DB environments |
 
 ---
 
-## 🔁 Multi-Table Workflows
+## Multi-Table Workflows
 
 Masking workflows can operate across multiple tables with shared policies, respecting:
 
@@ -90,7 +91,7 @@ Masking workflows can operate across multiple tables with shared policies, respe
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 - Masking rules can be tied to specific keys (e.g., FPE, HMAC)
 - All masking logic is logged for traceability
@@ -98,7 +99,7 @@ Masking workflows can operate across multiple tables with shared policies, respe
 
 ---
 
-## 📥 Sample Input
+## Sample Input
 
 ```json
 [
@@ -110,7 +111,7 @@ Masking workflows can operate across multiple tables with shared policies, respe
 ]
 ```
 
-## 📤 Output (Masked)
+## Output (Masked)
 
 ```json
 [
@@ -124,19 +125,19 @@ Masking workflows can operate across multiple tables with shared policies, respe
 
 ---
 
-## 🧩 Masking Rule Reference
+## Masking Rule Reference
 
-| Field              | Supported Rule Types       |
-|--------------------|----------------------------|
-| `first_name`       | SEED, PRESERVE             |
-| `last_name`        | SEED, HASH                 |
-| `email`            | PRESERVE, REDACT           |
-| `ssn`              | FPE, HASH, REDACT          |
-| `credit_card`      | FPE, REGEX, REDACT         |
+| Field         | Supported Rule Types |
+|---------------|----------------------|
+| `first_name`  | SEED, PRESERVE       |
+| `last_name`   | SEED, HASH           |
+| `email`       | PRESERVE, REDACT     |
+| `ssn`         | FPE, HASH, REDACT    |
+| `credit_card` | FPE, REGEX, REDACT   |
 
 ---
 
-## 🧪 Testing Tips
+## Testing Tips
 
 - Use `"dryRun": true` to preview changes
 - Set `"loggingLevel": "DEBUG"` to trace every span replacement

@@ -1,27 +1,29 @@
+# SDK Integration Guide (Java / PySpark)
 
-# 🧰 SDK Integration Guide (Java / PySpark)
-
-This guide provides instructions to integrate the Faasera SDK within your data pipelines using either Java or PySpark environments.
-
----
-
-## 🚀 Overview
-
-The Faasera SDK enables you to embed core capabilities like profiling, masking, and validation directly into your ETL or ML workflows using Java or PySpark. This is ideal for high-throughput, low-latency scenarios where data privacy must be enforced in real-time.
+This guide provides instructions to integrate the Faasera SDK within your data pipelines using either Java or PySpark
+environments.
 
 ---
 
-## 📦 Supported Environments
+## Overview
 
-| Environment | Integration Mode   | SDK Format       |
-|-------------|--------------------|------------------|
-| Java        | JAR / Maven        | faasera-core.jar |
-| PySpark     | pip / `.whl`       | faasera_sdk.whl  |
-| Databricks  | Notebook / Wheel   | `%pip install`   |
+The Faasera SDK enables you to embed core capabilities like profiling, masking, and validation directly into your ETL or
+ML workflows using Java or PySpark. This is ideal for high-throughput, low-latency scenarios where data privacy must be
+enforced in real-time.
 
 ---
 
-## 🔧 Java SDK Integration
+## Supported Environments
+
+| Environment | Integration Mode | SDK Format       |
+|-------------|------------------|------------------|
+| Java        | JAR / Maven      | faasera-core.jar |
+| PySpark     | pip / `.whl`     | faasera_sdk.whl  |
+| Databricks  | Notebook / Wheel | `%pip install`   |
+
+---
+
+## Java SDK Integration
 
 ### Step 1: Add the SDK
 
@@ -59,7 +61,7 @@ spark.sql("SELECT mask_udf(column1) FROM input_table").show();
 
 ---
 
-## 🔥 PySpark SDK Integration
+## PySpark SDK Integration
 
 ### Step 1: Install the Wheel
 
@@ -87,7 +89,7 @@ masked_df = masker.mask(spark_df)
 
 ---
 
-## 🧪 Testing Locally
+## Testing Locally
 
 You can run the SDK with sample CSVs or Parquet files:
 
@@ -103,7 +105,7 @@ pyspark --packages faasera_sdk
 
 ---
 
-## ✅ Tips & Best Practices
+## Tips & Best Practices
 
 - Reuse policy files across stages (profile → mask → validate)
 - Use broadcast joins to optimize masking at scale
@@ -112,7 +114,7 @@ pyspark --packages faasera_sdk
 
 ---
 
-## 📄 License Activation
+## License Activation
 
 For SDK-based deployments, a license token (offline or cloud-linked) is required. Configure the license path as:
 

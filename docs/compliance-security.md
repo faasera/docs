@@ -1,11 +1,11 @@
+# Data Security Practices
 
-# 🔐 Data Security Practices
-
-Faasera is built from the ground up with enterprise-grade security to protect sensitive data across all workloads, whether on cloud, hybrid, or on-prem environments.
+Faasera is built from the ground up with enterprise-grade security to protect sensitive data across all workloads,
+whether on cloud, hybrid, or on-prem environments.
 
 ---
 
-## 🔒 Encryption Standards
+## Encryption Standards
 
 - **In-Transit**: TLS 1.2+ encryption for all API, function, and SDK communication.
 - **At-Rest**: Configurable encryption using AES-256 or customer-managed keys (CMK).
@@ -13,18 +13,18 @@ Faasera is built from the ground up with enterprise-grade security to protect se
 
 ---
 
-## 🔑 Key Management
+## Key Management
 
 - Supports native integration with:
-  - AWS KMS
-  - Azure Key Vault
-  - Google Cloud KMS
+    - AWS KMS
+    - Azure Key Vault
+    - Google Cloud KMS
 - Local KMS abstraction for on-prem deployments.
 - Key rotation, revocation, and versioning fully supported.
 
 ---
 
-## 👥 Authentication & Access Control
+## Authentication & Access Control
 
 - **RBAC**: Role-Based Access Control with fine-grained permissions.
 - **SAML / OIDC**: Supports SSO integration with enterprise identity providers.
@@ -32,7 +32,7 @@ Faasera is built from the ground up with enterprise-grade security to protect se
 
 ---
 
-## 📜 Auditing & Monitoring
+## Auditing & Monitoring
 
 - Every interaction with Faasera (UI/API/Function) is logged.
 - Tamper-proof audit logs for compliance review.
@@ -40,7 +40,7 @@ Faasera is built from the ground up with enterprise-grade security to protect se
 
 ---
 
-## 🛡️ Threat Protection
+## Threat Protection
 
 - Built-in protections against injection, replay, and DoS attacks.
 - Secure sandbox execution of user-defined functions (UDFs).
@@ -48,7 +48,7 @@ Faasera is built from the ground up with enterprise-grade security to protect se
 
 ---
 
-## 📦 Secure Deployment
+## Secure Deployment
 
 - Containerized and serverless-first deployment models.
 - Built-in vulnerability scanning and hardened base images.
@@ -56,17 +56,17 @@ Faasera is built from the ground up with enterprise-grade security to protect se
 
 ---
 
-## ✅ Compliance-Aligned Practices
+## Compliance-Aligned Practices
 
 - Faasera’s engineering and operational processes align with:
-  - SOC 2 Type II (internal controls and monitoring)
-  - ISO 27001 (information security management)
-  - HIPAA (for healthcare customers)
-  - GDPR & CCPA readiness
+    - SOC 2 Type II (internal controls and monitoring)
+    - ISO 27001 (information security management)
+    - HIPAA (for healthcare customers)
+    - GDPR & CCPA readiness
 
 ---
 
-## 📘 Related
+## Related
 
 - [Regulation Coverage](./compliance-coverage.md)
 - [Policy Format](./reference-policy-format.md)

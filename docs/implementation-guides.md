@@ -1,12 +1,14 @@
-# 🧰 Faasera Implementation Guides
+# Faasera Implementation Guides
 
-This section provides detailed guidance on integrating Faasera with your environment using SDKs, APIs, or cloud-native services.
+This section provides detailed guidance on integrating Faasera with your environment using SDKs, APIs, or cloud-native
+services.
 
 ---
 
-## 📦 SDK Integration (Java / PySpark)
+## SDK Integration (Java / PySpark)
 
-Faasera SDKs offer drop-in modules for Java and PySpark environments. These SDKs let you embed Faasera’s profiling, masking, and validation engines directly into your Spark pipelines or Java applications.
+Faasera SDKs offer drop-in modules for Java and PySpark environments. These SDKs let you embed Faasera’s profiling,
+masking, and validation engines directly into your Spark pipelines or Java applications.
 
 ### Key Features
 
@@ -16,13 +18,14 @@ Faasera SDKs offer drop-in modules for Java and PySpark environments. These SDKs
 - Deterministic and format-preserving masking options
 - On-the-fly policy generation using metadata
 
-📘 **See full guide:** `implementation-sdk.md` _(coming soon)_
+**See full guide:** `implementation-sdk.md` _(coming soon)_
 
 ---
 
-## 🌐 API Integration
+## API Integration
 
-Faasera’s REST APIs provide granular access to each platform component, enabling integration with any system that can send HTTP requests.
+Faasera’s REST APIs provide granular access to each platform component, enabling integration with any system that can
+send HTTP requests.
 
 ### Key Use Cases
 
@@ -33,11 +36,11 @@ Faasera’s REST APIs provide granular access to each platform component, enabli
 
 Authentication is handled via JWT tokens with fine-grained scope permissions.
 
-📘 **See full guide:** `implementation-api.md` _(coming soon)_
+**See full guide:** `implementation-api.md` _(coming soon)_
 
 ---
 
-## ☁️ Cloud Functions
+## Cloud Functions
 
 Deploy Faasera as event-driven serverless functions using:
 
@@ -55,4 +58,4 @@ These functions can be triggered via API Gateway, message queues, or event buses
 
 Faasera’s cloud-native footprint makes it ideal for embedding compliance logic with zero operational overhead.
 
-📘 **See full guide:** `implementation-cloud.md` _(coming soon)_
+**See full guide:** `implementation-cloud.md` _(coming soon)_

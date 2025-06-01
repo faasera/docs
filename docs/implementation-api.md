@@ -1,16 +1,18 @@
-# 🧰 Faasera API Integration Guide
+# Faasera API Integration Guide
 
-This guide explains how to integrate with the Faasera platform using RESTful APIs for real-time data profiling, masking, validation, and audit reporting.
-
----
-
-## 🚀 Overview
-
-Faasera exposes REST APIs that allow programmatic access to its core services from any client (e.g., ETL jobs, apps, scripts, serverless functions).
+This guide explains how to integrate with the Faasera platform using RESTful APIs for real-time data profiling, masking,
+validation, and audit reporting.
 
 ---
 
-## 🔐 Authentication
+## Overview
+
+Faasera exposes REST APIs that allow programmatic access to its core services from any client (e.g., ETL jobs, apps,
+scripts, serverless functions).
+
+---
+
+## Authentication
 
 All endpoints require authentication via API Key or JWT (based on configuration).
 
@@ -22,7 +24,7 @@ Authorization: Bearer <your_token_here>
 
 ---
 
-## 📤 Profiling API
+## Profiling API
 
 ### Endpoint
 
@@ -56,7 +58,7 @@ POST /api/v1/profiler/run
 
 ---
 
-## 🛡️ Masking API
+## Masking API
 
 ### Endpoint
 
@@ -90,7 +92,7 @@ POST /api/v1/mask/run
 
 ---
 
-## ✅ Validation API
+## Validation API
 
 ### Endpoint
 
@@ -116,7 +118,7 @@ POST /api/v1/validate
 
 ---
 
-## 📊 Audit & Risk API
+## Audit & Risk API
 
 ### Endpoint
 
@@ -136,7 +138,7 @@ GET /api/v1/audit/risk-summary?datasetId=<id>
 
 ---
 
-## 📁 File-based API (Optional)
+## File-based API (Optional)
 
 Faasera supports base64 or presigned file uploads for batch profiling/masking:
 
@@ -147,7 +149,7 @@ POST /api/v1/file/mask
 
 ---
 
-## 🧩 Response Schema
+## Response Schema
 
 All responses follow a standard envelope:
 
@@ -161,7 +163,7 @@ All responses follow a standard envelope:
 
 ---
 
-## 🧪 API Testing
+## API Testing
 
 Use tools like Postman or curl:
 
@@ -174,7 +176,7 @@ curl -X POST https://api.faasera.ai/api/v1/mask/run \
 
 ---
 
-## 📚 Notes
+## Notes
 
 - APIs are stateless and scalable.
 - Rate limits and audit logs are enabled.
@@ -182,6 +184,6 @@ curl -X POST https://api.faasera.ai/api/v1/mask/run \
 
 ---
 
-## 🆘 Need Help?
+## Need Help?
 
 For access credentials or support, contact: [support@faasera.ai](mailto:support@faasera.ai)

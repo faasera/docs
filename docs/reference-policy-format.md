@@ -1,6 +1,7 @@
-# 📖 Policy Format
+# Policy Format
 
-Policies in Faasera are defined in JSON format. A policy defines how profiling, masking, and validation should behave for a given dataset.
+Policies in Faasera are defined in JSON format. A policy defines how profiling, masking, and validation should behave
+for a given dataset.
 
 ## Example Policy Structure
 
@@ -32,9 +33,9 @@ Policies in Faasera are defined in JSON format. A policy defines how profiling, 
 
 ## Top-Level Keys
 
-| Key         | Description                                  |
-|-------------|----------------------------------------------|
-| `name`      | Name of the policy                           |
-| `recognizers` | Enabled recognizer types                   |
-| `masking`   | Masking configuration per entity             |
-| `aiModel`   | AI hinting and classification mapping        |
+| Key           | Description                           |
+|---------------|---------------------------------------|
+| `name`        | Name of the policy                    |
+| `recognizers` | Enabled recognizer types              |
+| `masking`     | Masking configuration per entity      |
+| `aiModel`     | AI hinting and classification mapping |

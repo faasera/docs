@@ -1,20 +1,21 @@
-# ☁️ Cloud Functions Integration Guide
+# Cloud Functions Integration Guide
 
-Faasera supports seamless deployment of its core components via cloud-native Functions-as-a-Service (FaaS) on AWS, Azure, and Google Cloud. This guide covers deploying Faasera Profiler and Masking services using cloud functions.
-
----
-
-## 🚀 Supported Platforms
-
-| Cloud Platform | Function Type       | Use Cases                                      |
-|----------------|---------------------|------------------------------------------------|
-| AWS            | Lambda              | Real-time masking/profiling via API Gateway    |
-| Azure          | Azure Functions     | Batch & stream data compliance workflows       |
-| Google Cloud   | Cloud Functions     | Lightweight API-based masking for GCS/BigQuery |
+Faasera supports seamless deployment of its core components via cloud-native Functions-as-a-Service (FaaS) on AWS,
+Azure, and Google Cloud. This guide covers deploying Faasera Profiler and Masking services using cloud functions.
 
 ---
 
-## 🔧 General Setup
+## Supported Platforms
+
+| Cloud Platform | Function Type   | Use Cases                                      |
+|----------------|-----------------|------------------------------------------------|
+| AWS            | Lambda          | Real-time masking/profiling via API Gateway    |
+| Azure          | Azure Functions | Batch & stream data compliance workflows       |
+| Google Cloud   | Cloud Functions | Lightweight API-based masking for GCS/BigQuery |
+
+---
+
+## General Setup
 
 All Faasera cloud functions follow the same deployment pattern:
 
@@ -25,7 +26,7 @@ All Faasera cloud functions follow the same deployment pattern:
 
 ---
 
-## 📦 Package Structure
+## Package Structure
 
 For Java-based functions:
 
@@ -50,13 +51,14 @@ For Python:
 
 ---
 
-## 🌩️ AWS Lambda
+## AWS Lambda
 
 ### Deployment Steps
 
 1. **Build ZIP** with dependencies.
 2. Create IAM Role with Lambda + VPC access (optional).
 3. Deploy using:
+
 ```bash
 aws lambda create-function   --function-name FaaseraFunction   --runtime java11   --handler com.faasera.FunctionHandler   --zip-file fileb://faasera.zip   --role arn:aws:iam::123456789:role/lambda-role
 ```
@@ -65,7 +67,7 @@ aws lambda create-function   --function-name FaaseraFunction   --runtime java11 
 
 ---
 
-## ☁️ Azure Functions
+## Azure Functions
 
 ### Supported Types
 
@@ -83,7 +85,7 @@ func azure functionapp publish faasera-comply-function
 
 ---
 
-## 🔁 Google Cloud Functions
+## Google Cloud Functions
 
 ### Deployment
 
@@ -93,25 +95,27 @@ gcloud functions deploy faasera-function   --runtime java11   --trigger-http   -
 
 ---
 
-## 🔐 Configuration Options
+## Configuration Options
 
 Pass configurations using:
+
 - Environment variables
 - Encrypted files (with KMS)
 - Secrets Manager (AWS) or Key Vault (Azure)
 
 ---
 
-## 🧪 Testing
+## Testing
 
 All functions support:
+
 - REST API testing using Postman/curl
 - Event-driven triggers with test data
 - Cloud logs via CloudWatch, Application Insights, or GCP Logs
 
 ---
 
-## ✅ Example Payload (Masking)
+## Example Payload (Masking)
 
 ```json
 {
@@ -128,7 +132,7 @@ All functions support:
 
 ---
 
-## 📘 References
+## References
 
 - AWS Lambda: https://docs.aws.amazon.com/lambda
 - Azure Functions: https://docs.microsoft.com/en-us/azure/azure-functions/

@@ -1,4 +1,4 @@
-# 🧩 Faasera Component Breakdown
+# Faasera Component Breakdown
 
 This document provides a deeper look at each core component of the Faasera platform — including responsibilities,
 inputs/outputs, and extension points — to help developers, architects, and platform teams understand how each part
@@ -6,7 +6,7 @@ contributes to the system.
 
 ---
 
-## 🧠 Core Service Components
+## Core Service Components
 
 ### 1. **Profiling Service**
 
@@ -80,7 +80,7 @@ contributes to the system.
 
 ---
 
-## ⚙️ Orchestration & Execution
+## Orchestration & Execution
 
 ### 8. **Faasera Orchestrator**
 
@@ -103,7 +103,7 @@ contributes to the system.
 
 ---
 
-## 🔌 Connectors & Integration
+## Connectors & Integration
 
 ### 10. **Connector Layer**
 
@@ -114,7 +114,7 @@ contributes to the system.
 
 ---
 
-## 🔐 Shared Infrastructure
+## Shared Infrastructure
 
 - **Audit Logs:** Available per pipeline and task
 - **Encryption:** TLS in transit, AES/FPE at rest (configurable)

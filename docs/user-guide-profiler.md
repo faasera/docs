@@ -1,24 +1,28 @@
 # 🧪 Faasera Profiler Guide
 
-Faasera Profiler supports advanced techniques to detect, classify, and protect sensitive data in **structured and unstructured** text. You can configure the Profiler to use **AI-driven entity hinting**, **heuristic recognition**, or a **hybrid** of both approaches.
+Faasera Profiler supports advanced techniques to detect, classify, and protect sensitive data in **structured and
+unstructured** text. You can configure the Profiler to use **AI-driven entity hinting**, **heuristic recognition**, or a
+**hybrid** of both approaches.
 
-This guide explains the available modes, how to configure them, and how Faasera blends techniques like **dictionary matching**, **NLP models**, and **checksum validation** to enrich entity recognition.
+This guide explains the available modes, how to configure them, and how Faasera blends techniques like **dictionary
+matching**, **NLP models**, and **checksum validation** to enrich entity recognition.
 
 ---
 
-## 🔄 Hint Processing Modes
+## Hint Processing Modes
 
-| Mode | Description |
-|------|-------------|
-| `AI_ONLY` | Use only AI hint service results. Disables all heuristic detection. |
-| `HEURISTIC_ONLY` | Use only heuristic recognizers (dictionary, NLP, checksum, etc.). |
+| Mode                 | Description                                                              |
+|----------------------|--------------------------------------------------------------------------|
+| `AI_ONLY`            | Use only AI hint service results. Disables all heuristic detection.      |
+| `HEURISTIC_ONLY`     | Use only heuristic recognizers (dictionary, NLP, checksum, etc.).        |
 | `HYBRID` *(default)* | Combine both AI and heuristic results, merging them with disambiguation. |
 
 ---
 
-## 🤖 AI Hinting (FaaseraAI Hint Service)
+## AI Hinting (FaaseraAI Hint Service)
 
-When enabled, Faasera sends selected text values to an external Hinting Service (e.g., GLiNER) via HTTP POST. The service returns structured **entity spans** like this:
+When enabled, Faasera sends selected text values to an external Hinting Service (e.g., GLiNER) via HTTP POST. The
+service returns structured **entity spans** like this:
 
 ```json
 [
@@ -44,14 +48,14 @@ These spans are mapped to internal recognizer types:
 
 ---
 
-## 🔍 Heuristic Recognition Techniques
+## Heuristic Recognition Techniques
 
 ### 1. NLP Models (Apache OpenNLP)
 
-| Entity Type | Example |
-|-------------|---------|
+| Entity Type | Example                                  |
+|-------------|------------------------------------------|
 | Person Name | "My name is Alice Carter" → Alice Carter |
-| Location    | "I live in New York" → New York |
+| Location    | "I live in New York" → New York          |
 
 ---
 
@@ -82,10 +86,10 @@ Trigger context keywords like:
 
 ### 4. Checksum-Based Validation
 
-| Type | Example | Method |
-|------|---------|--------|
+| Type        | Example               | Method         |
+|-------------|-----------------------|----------------|
 | Credit Card | `4111 1111 1111 1111` | Luhn Algorithm |
-| TFN | `123 456 782` | Modulus check |
+| TFN         | `123 456 782`         | Modulus check  |
 
 ---
 
@@ -101,17 +105,17 @@ Define advanced expressions like:
 
 ## ⚙️ Why Use Heuristics?
 
-| Benefit | Description |
-|---------|-------------|
-| Speed | No external API calls |
-| Predictability | Same input → same result |
-| Auditability | Easy to trace |
-| Customizability | User-defined logic |
-| Fallback | Works even if AI model fails |
+| Benefit         | Description                  |
+|-----------------|------------------------------|
+| Speed           | No external API calls        |
+| Predictability  | Same input → same result     |
+| Auditability    | Easy to trace                |
+| Customizability | User-defined logic           |
+| Fallback        | Works even if AI model fails |
 
 ---
 
-## 🔁 Detection Workflow
+## Detection Workflow
 
 ```text
                Raw Text Input
@@ -132,7 +136,7 @@ Define advanced expressions like:
 
 ---
 
-## 🧾 Configuration
+## Configuration
 
 ### In Policy JSON
 
@@ -150,7 +154,7 @@ Define advanced expressions like:
 
 ---
 
-## 📈 Confidence & Span Handling
+## Confidence & Span Handling
 
 - Each span has a `confidence` score (from AI or default).
 - Merged via `SpanDisambiguationService` to remove overlaps.
@@ -158,24 +162,26 @@ Define advanced expressions like:
 
 ---
 
-## 🧠 Use Case Scenarios
+## Use Case Scenarios
 
-| Use Case | Recommended Mode |
-|----------|------------------|
-| AI-trained model use | `AI_ONLY` |
-| Regulated pipelines | `HEURISTIC_ONLY` |
-| General-purpose | `HYBRID` |
+| Use Case             | Recommended Mode |
+|----------------------|------------------|
+| AI-trained model use | `AI_ONLY`        |
+| Regulated pipelines  | `HEURISTIC_ONLY` |
+| General-purpose      | `HYBRID`         |
 
 ---
 
-## 🧪 Output Example
+## Output Example
 
-Input:  
+Input:
+
 ```text
 "John Doe’s email is john@faasera.ai and SSN is 123-45-6789."
 ```
 
-Output:  
+Output:
+
 ```json
 [
   { "text": "John", "label": "FIRST_NAME", "confidence": 0.76 },
@@ -186,17 +192,17 @@ Output:
 
 ---
 
-## 🧩 Summary of Components
+## Summary of Components
 
-| Component | Purpose |
-|-----------|---------|
-| HintService | Sends text to AI |
-| HintMapper | Maps labels to internal recognizers |
-| Profiler | Combines and redacts spans |
+| Component   | Purpose                             |
+|-------------|-------------------------------------|
+| HintService | Sends text to AI                    |
+| HintMapper  | Maps labels to internal recognizers |
+| Profiler    | Combines and redacts spans          |
 
 ---
 
-## ✅ Final Notes
+## Final Notes
 
 - HYBRID is default and best for mixed datasets
 - You can disable AI or heuristic engines in policy

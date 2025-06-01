@@ -1,10 +1,11 @@
-# 🚀 Getting Started with Faasera
+# Getting Started with Faasera
 
-Welcome to Faasera! This guide will walk you through the quickest way to get started with Faasera — whether you're a developer, data engineer, or compliance lead.
+Welcome to Faasera! This guide will walk you through the quickest way to get started with Faasera — whether you're a
+developer, data engineer, or compliance lead.
 
 ---
 
-## 🧰 What You Can Do with Faasera
+## What You Can Do with Faasera
 
 - Profile structured or semi-structured data to detect sensitive fields
 - Apply deterministic and non-deterministic masking
@@ -14,14 +15,16 @@ Welcome to Faasera! This guide will walk you through the quickest way to get sta
 
 ---
 
-## ⚙️ Installation Options
+## Installation Options
 
 Choose one of the following:
 
 ### Option 1: Use the Hosted UI (Recommended)
+
 No setup required. Contact [support@faasera.ai](mailto:support@faasera.ai) for a trial account.
 
 ### Option 2: Local Docker Environment
+
 ```bash
 git clone https://github.com/faasera/faasera-platform.git
 cd faasera-platform
@@ -31,24 +34,26 @@ docker-compose up -d
 Access the UI at: [http://localhost:8080](http://localhost:8080)
 
 ### Option 3: Use SDK or Cloud Function
+
 See:
+
 - [Deployment Guide](./faasera-deployment-guide.md)
 - [SDK Integration Guide](./implementation-sdk.md)
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
-| Tool | Required For |
-|------|--------------|
-| Docker / Docker Compose | Local UI platform |
-| Java 11+ or PySpark | SDK-based masking |
-| Postgres / MySQL / Snowflake | Test connection setup |
-| AWS CLI or Azure CLI | Cloud function deployment |
+| Tool                         | Required For              |
+|------------------------------|---------------------------|
+| Docker / Docker Compose      | Local UI platform         |
+| Java 11+ or PySpark          | SDK-based masking         |
+| Postgres / MySQL / Snowflake | Test connection setup     |
+| AWS CLI or Azure CLI         | Cloud function deployment |
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```plaintext
 faasera-platform/
@@ -62,7 +67,7 @@ faasera-platform/
 
 ---
 
-## 🚦 First Workflow Example (UI Mode)
+## First Workflow Example (UI Mode)
 
 1. Login to Faasera UI
 2. Create a new Project → Environment → Connection
@@ -74,7 +79,7 @@ faasera-platform/
 
 ---
 
-## 💻 First Workflow Example (SDK Mode)
+## First Workflow Example (SDK Mode)
 
 ```java
 FaaseraEngine engine = FaaseraEngine.builder()
@@ -88,7 +93,7 @@ engine.runMasking();
 
 ---
 
-## 📌 Next Steps
+## Next Steps
 
 - 👉 [Run Your First Profiling Task](./user-guide-profiler.md)
 - 🔒 [Apply Masking to Sensitive Fields](./user-guide-masking.md)
@@ -96,7 +101,7 @@ engine.runMasking();
 
 ---
 
-## 🆘 Need Help?
+## Need Help?
 
 - Documentation: [https://faasera.ai/docs](https://faasera.ai/docs)
 - Email: [support@faasera.ai](mailto:support@faasera.ai)

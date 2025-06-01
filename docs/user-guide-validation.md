@@ -1,35 +1,37 @@
-# ✅ User Guide: Faasera Validation Service
+# User Guide: Faasera Validation Service
 
-The Faasera Validation Service ensures the accuracy, integrity, and structure of masked or synthetic data by comparing it against the original dataset or validation rules. It supports both **rule-based** and **structural validation**, helping teams verify that transformations have not compromised data utility or format compliance.
-
----
-
-## 🔍 Why Use Validation?
-
-| Benefit                  | Description                                                             |
-|--------------------------|-------------------------------------------------------------------------|
-| Data Integrity Checks    | Ensure key attributes retain relational integrity (e.g., FK/PK mappings)|
-| Schema Conformance       | Detects schema mismatches between source and masked data               |
-| Format Validation        | Confirms the output matches required formats (e.g., SSN, DOB)          |
-| Quality Assurance        | Flags anomalies or inconsistencies introduced during masking            |
-| Audit Traceability       | Outputs validation logs for compliance and traceability                 |
+The Faasera Validation Service ensures the accuracy, integrity, and structure of masked or synthetic data by comparing
+it against the original dataset or validation rules. It supports both **rule-based** and **structural validation**,
+helping teams verify that transformations have not compromised data utility or format compliance.
 
 ---
 
-## ⚙️ Modes of Validation
+## Why Use Validation?
+
+| Benefit               | Description                                                              |
+|-----------------------|--------------------------------------------------------------------------|
+| Data Integrity Checks | Ensure key attributes retain relational integrity (e.g., FK/PK mappings) |
+| Schema Conformance    | Detects schema mismatches between source and masked data                 |
+| Format Validation     | Confirms the output matches required formats (e.g., SSN, DOB)            |
+| Quality Assurance     | Flags anomalies or inconsistencies introduced during masking             |
+| Audit Traceability    | Outputs validation logs for compliance and traceability                  |
+
+---
+
+## Modes of Validation
 
 Faasera supports the following validation modes:
 
-| Mode               | Description                                                           |
-|--------------------|-----------------------------------------------------------------------|
-| `STRUCTURAL`       | Validates column formats, nullability, regex patterns, and data types |
-| `SEMANTIC`         | Compares masked vs original value behavior or distribution            |
-| `REFERENTIAL`      | Verifies foreign key and primary key relationships post-transformation|
-| `POLICY_BASED`     | Enforces explicit rules defined in your masking or data policy files  |
+| Mode           | Description                                                            |
+|----------------|------------------------------------------------------------------------|
+| `STRUCTURAL`   | Validates column formats, nullability, regex patterns, and data types  |
+| `SEMANTIC`     | Compares masked vs original value behavior or distribution             |
+| `REFERENTIAL`  | Verifies foreign key and primary key relationships post-transformation |
+| `POLICY_BASED` | Enforces explicit rules defined in your masking or data policy files   |
 
 ---
 
-## 🛠️ Configuration Example (Validation Policy)
+## Configuration Example (Validation Policy)
 
 Validation rules can be declared inline or in a separate validation policy:
 
@@ -57,7 +59,7 @@ Validation rules can be declared inline or in a separate validation policy:
 
 ---
 
-## 📝 Example Output
+## Example Output
 
 After running validation, Faasera generates detailed reports:
 
@@ -81,7 +83,7 @@ These reports are stored in the Faasera UI and can be exported to PDF/CSV or acc
 
 ---
 
-## 🧠 Best Practices
+## Best Practices
 
 - Use **STRUCTURAL** validation for format-sensitive fields like IDs, emails, and dates.
 - Use **REFERENTIAL** validation after masking datasets with foreign key dependencies.
@@ -90,19 +92,21 @@ These reports are stored in the Faasera UI and can be exported to PDF/CSV or acc
 
 ---
 
-## 🧩 Integration Options
+## Integration Options
 
-| Environment    | Integration Example                                              |
-|----------------|------------------------------------------------------------------|
-| Airflow        | Validation task after masking DAG step                           |
-| Azure Data Factory | Add validation activity in a pipeline before publishing      |
-| Spark          | Run validation SDK step after masking                           |
-| Snowflake      | Use UDFs or scripting to call Faasera SDK                        |
+| Environment        | Integration Example                                     |
+|--------------------|---------------------------------------------------------|
+| Airflow            | Validation task after masking DAG step                  |
+| Azure Data Factory | Add validation activity in a pipeline before publishing |
+| Spark              | Run validation SDK step after masking                   |
+| Snowflake          | Use UDFs or scripting to call Faasera SDK               |
 
 ---
 
-## ✅ Summary
+## Summary
 
-The Validation Service ensures that post-masked or synthetic datasets retain structural, semantic, and relational integrity. It prevents compliance regressions and ensures that data quality is preserved after transformations — without requiring manual QA.
+The Validation Service ensures that post-masked or synthetic datasets retain structural, semantic, and relational
+integrity. It prevents compliance regressions and ensures that data quality is preserved after transformations — without
+requiring manual QA.
 
 For more details, visit [www.faasera.ai](https://www.faasera.ai)

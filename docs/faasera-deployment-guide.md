@@ -1,4 +1,4 @@
-# 🚀 Faasera Deployment Guide
+# Faasera Deployment Guide
 
 This guide explains how to deploy Faasera components across various environments, including serverless cloud platforms,
 SDK-based pipelines, and the full visual UI stack. It provides deployment patterns, prerequisites, and operational best
@@ -6,7 +6,7 @@ practices.
 
 ---
 
-## 🧭 Deployment Modes Overview
+## Deployment Modes Overview
 
 | Mode                 | Description                                                             | Ideal For                              |
 |----------------------|-------------------------------------------------------------------------|----------------------------------------|
@@ -18,7 +18,7 @@ practices.
 
 ---
 
-## ☁️ Cloud Function Deployment
+## Cloud Function Deployment
 
 ### Supported Platforms:
 
@@ -44,7 +44,7 @@ arn:aws:iam::<account>:role/FaaseraLambdaRole
 
 ---
 
-## 🧰 SDK Deployment (Java / PySpark)
+## SDK Deployment (Java / PySpark)
 
 ### Use Cases:
 
@@ -66,7 +66,7 @@ arn:aws:iam::<account>:role/FaaseraLambdaRole
 
 ---
 
-## 🌐 REST API Deployment
+## REST API Deployment
 
 ### Quickstart:
 
@@ -86,7 +86,7 @@ java -jar faasera-api-server.jar
 
 ---
 
-## 🖥️ Full Platform UI Deployment
+## Full Platform UI Deployment
 
 ### Architecture:
 
@@ -109,7 +109,7 @@ docker-compose up -d
 
 ---
 
-## 🔌 Plugin Deployment
+## Plugin Deployment
 
 ### Available Plugins:
 
@@ -126,7 +126,7 @@ docker-compose up -d
 
 ---
 
-## 🔐 Licensing & Security
+## Licensing & Security
 
 - Functions and SDKs support offline license tokens
 - Optional rate-limiting, API keys, and RBAC controls
@@ -135,7 +135,7 @@ docker-compose up -d
 
 ---
 
-## ✅ Best Practices
+## Best Practices
 
 | Area            | Recommendation                                            |
 |-----------------|-----------------------------------------------------------|

@@ -1,4 +1,4 @@
-# 📺 Faasera UI Walkthrough
+# Faasera UI Walkthrough
 
 This guide offers an overview of the Faasera web interface and how to navigate through its key features. Whether you're
 a data engineer, compliance officer, or product owner, this walkthrough will help you understand how to operate
@@ -6,14 +6,14 @@ Faasera’s all-in-one compliance platform.
 
 ---
 
-## 🎬 Watch the Full Demo
+## Watch the Full Demo
 
 👉 **[Watch on YouTube](https://youtu.be/8mWDAm6-mHQ?si=vkVFLsx7JiGt1Id-)**  
 Explore the Faasera UI in action — from metadata discovery to masking, synthetic generation, and real-time validation.
 
 ---
 
-## 🧭 UI Navigation Structure
+## UI Navigation Structure
 
 Faasera’s UI is designed around a clean, modular structure with the following core areas:
 

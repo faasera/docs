@@ -72,7 +72,7 @@ Recognizers are grouped into functional categories to help simplify policy creat
 
 ---
 
-### 🖥️ Technology
+### Technology
 
 | Recognizer                                           | Description            |
 |------------------------------------------------------|------------------------|
@@ -82,7 +82,7 @@ Recognizers are grouped into functional categories to help simplify policy creat
 
 ---
 
-### 🧬 Healthcare Information
+### Healthcare Information
 
 | Recognizer                                            | Description         |
 |-------------------------------------------------------|---------------------|
@@ -93,7 +93,7 @@ Recognizers are grouped into functional categories to help simplify policy creat
 
 ---
 
-### 🕓 Temporal
+### Temporal
 
 | Recognizer                                        | Description                 |
 |---------------------------------------------------|-----------------------------|
@@ -101,7 +101,7 @@ Recognizers are grouped into functional categories to help simplify policy creat
 
 ---
 
-### 🔧 Extensible Recognizers
+### Extensible Recognizers
 
 Faasera supports the following **dynamic recognizer types**, allowing users to define custom logic using dictionaries or
 masking functions:

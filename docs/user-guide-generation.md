@@ -1,23 +1,25 @@
-# 🚀 Faasera User Guide: Synthetic Data Generation
+# Faasera User Guide: Synthetic Data Generation
 
-Faasera’s Synthetic Data Engine enables the generation of realistic, lineage-aware datasets for non-production environments. It supports multiple generation modes, schema preservation, referential integrity, and seeded randomness — all aligned with compliance and privacy goals.
-
----
-
-## 🔧 Key Features
-
-| Feature                         | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| Schema-Based Generation         | Generates data based on existing schema or user-defined templates          |
-| Seeded Randomness               | Ensures repeatability for test data generation using fixed seeds           |
-| Referential Integrity           | Maintains relationships between foreign keys and primary keys              |
-| Context-Aware Fields            | Applies domain logic (e.g., age vs. DOB, state vs. zip)                     |
-| Privacy-Enhanced Defaults       | Avoids re-identification by generating safe, non-real data                 |
-| AI-Augmented Value Suggestions  | Optionally uses AI hints for plausible names, locations, or values         |
+Faasera’s Synthetic Data Engine enables the generation of realistic, lineage-aware datasets for non-production
+environments. It supports multiple generation modes, schema preservation, referential integrity, and seeded randomness —
+all aligned with compliance and privacy goals.
 
 ---
 
-## 🎛️ Configuration Modes
+## Key Features
+
+| Feature                        | Description                                                        |
+|--------------------------------|--------------------------------------------------------------------|
+| Schema-Based Generation        | Generates data based on existing schema or user-defined templates  |
+| Seeded Randomness              | Ensures repeatability for test data generation using fixed seeds   |
+| Referential Integrity          | Maintains relationships between foreign keys and primary keys      |
+| Context-Aware Fields           | Applies domain logic (e.g., age vs. DOB, state vs. zip)            |
+| Privacy-Enhanced Defaults      | Avoids re-identification by generating safe, non-real data         |
+| AI-Augmented Value Suggestions | Optionally uses AI hints for plausible names, locations, or values |
+
+---
+
+## Configuration Modes
 
 You can define generation rules per table and per column using a JSON policy structure. Key elements include:
 
@@ -38,19 +40,19 @@ You can define generation rules per table and per column using a JSON policy str
 
 ---
 
-## 🧬 Generation Types
+## Generation Types
 
-| Type           | Description                                                           |
-|----------------|-----------------------------------------------------------------------|
-| `SEED`         | Picks value from a seeded list (e.g., names, cities)                  |
-| `RANDOM`       | Random value with optional format (e.g., strings, numbers)            |
-| `PRESERVE`     | Derived based on another field (e.g., email from firstname/lastname)  |
-| `DATE_RANDOM`  | Generates random date within a specified range                        |
-| `FPE_ENCODED`  | Applies format-preserving encoding using FPE keys                     |
+| Type          | Description                                                          |
+|---------------|----------------------------------------------------------------------|
+| `SEED`        | Picks value from a seeded list (e.g., names, cities)                 |
+| `RANDOM`      | Random value with optional format (e.g., strings, numbers)           |
+| `PRESERVE`    | Derived based on another field (e.g., email from firstname/lastname) |
+| `DATE_RANDOM` | Generates random date within a specified range                       |
+| `FPE_ENCODED` | Applies format-preserving encoding using FPE keys                    |
 
 ---
 
-## 🔗 Referential Integrity
+## Referential Integrity
 
 To preserve key relationships:
 
@@ -60,7 +62,7 @@ To preserve key relationships:
 
 ---
 
-## 🧠 Using AI for Plausible Generation (Optional)
+## Using AI for Plausible Generation (Optional)
 
 You can enrich values using external hinting or AI copilots (e.g., to generate more localized names, job titles, etc.)
 
@@ -69,29 +71,29 @@ You can enrich values using external hinting or AI copilots (e.g., to generate m
 
 ---
 
-## 📤 Output & Integration
+## Output & Integration
 
 - Output is written to the target database or file system (e.g., CSV, Parquet, JSON)
 - Can be invoked via:
-  - Faasera UI
-  - REST API
-  - Spark SDK
-  - Cloud Functions
+    - Faasera UI
+    - REST API
+    - Spark SDK
+    - Cloud Functions
 
 ---
 
-## ✅ Example Use Cases
+## Example Use Cases
 
-| Use Case                        | Benefit                                      |
-|----------------------------------|----------------------------------------------|
-| QA/Test Data Generation         | Enables safe, representative test environments |
-| Pre-Sales Demos                 | Creates realistic demo datasets               |
-| Data Science Bootstrapping      | Generates data for ML model experimentation   |
-| Sandboxing New Features         | Safe testbed without real PII/PHI             |
+| Use Case                   | Benefit                                        |
+|----------------------------|------------------------------------------------|
+| QA/Test Data Generation    | Enables safe, representative test environments |
+| Pre-Sales Demos            | Creates realistic demo datasets                |
+| Data Science Bootstrapping | Generates data for ML model experimentation    |
+| Sandboxing New Features    | Safe testbed without real PII/PHI              |
 
 ---
 
-## 🚨 Compliance Notes
+## Compliance Notes
 
 - All synthetic data is **non-reversible**
 - Can be flagged in lineage as `synthetic`
@@ -99,7 +101,7 @@ You can enrich values using external hinting or AI copilots (e.g., to generate m
 
 ---
 
-## 📘 Need Help?
+## Need Help?
 
 - Refer to your platform policy documentation for generation rules
 - Reach out via [www.faasera.ai](https://www.faasera.ai) for consulting
