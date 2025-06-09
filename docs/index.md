@@ -41,7 +41,7 @@
 - [Validation Guide](./user-guide-validation.md)
 - [Synthetic Data Guide](./user-guide-synthetic.md)
 - [Transformation Guide](./user-guide-transformation.md)
-- [Risk & Audit Guide](./user-guide-risk-audit-engine.md)
+- [Risk & Audit Guide](./faasera-risk-engine-user-guide.md)
 - [Chat Completion Proxy](./chat-gpt-proxy.md)
 - [Python SDK](./Faasera_Python_SDK.md)
 - [Trino SDK](./faasera-trino-usage-guide.md)
