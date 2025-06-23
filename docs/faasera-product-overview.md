@@ -12,6 +12,10 @@ Faasera is a modular, serverless data compliance platform that uses AI-driven in
 manage sensitive information across modern enterprise data pipelines. Built for real-time scale and regulatory agility,
 Faasera delivers instant compliance without disrupting your data ecosystem.
 
+<p align="center">
+<img src="./assets/faasera-overview.png" alt="Faasera Platform At-a-Glance" />
+</p>
+
 ---
 
 ## Core Value Proposition
